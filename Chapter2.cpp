@@ -1,6 +1,8 @@
 #include <iostream> // C++头文件无扩展名，但兼容C的.h后缀
 #include <cmath> // 老版为math.h
 
+using namespace std; // 将编译指令放在所有函数前，可以使它们共享名称空间
+
 void simon(int); // 函数头，声明函数
 
 int main() // 括号为空等同于不接受任何参数(void)
