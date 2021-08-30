@@ -1,5 +1,6 @@
 #include <iostream>
 #include <climits> //定义符号常量
+#include <typeinfo>
 using namespace std;
 
 int main()
@@ -72,9 +73,31 @@ int main()
     i = ch;
     cout << "The ASSIC of " << ch << " is " << i << endl;
     cout << "Using cout.put ";
-    cout.put(ch);
+    cout.put(ch); //cout的成员函数put，用于输出字符
 
+    cout << "$" <<endl;
 
+    const int tos = 1; //const常量初始化之后，就不能再被修改，const优于define，因为const可以确定变量的类型
+    //tos = 2; 错误，因为tos是只读变量
+    cout << tos;
 
+    float tub = 10e4; //指数型表示，不能打空格，e4表示10的四次方
+    float minb = 10e-4; //e-4表示10的负四次方
+    cout << tub << " " << minb <<endl;
+
+    //算数运算部分
+    cout << 17 / 3 << endl; //两个整数，则结果为整数
+    cout << 17 / 3.0 << endl; //有一个为浮点数，则结果为浮点数
+
+    cout << 17 % 2 << endl; //取余
+
+    char s1 = 'Q';
+    char s2 = 'W';
+    int s11 = int (s1); //强制类型转换
+    cout << s11 <<endl;
+    int s22 = (int) s2; //强制类型转换的两种方式
+    cout << s22 <<endl;
+    auto x = 0.0; //auto关键字让编译器能够根据初始值的类型定义变量的类型。编译器会把变量类型设置为和初始值相同。
+    cout << typeid(x).name() <<endl;
 
 }
