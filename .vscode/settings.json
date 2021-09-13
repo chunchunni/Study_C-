@@ -3,6 +3,7 @@
         "*.cpp": "cpp",
         "iostream": "cpp",
         "ios": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cstring": "cpp"
     }
 }
