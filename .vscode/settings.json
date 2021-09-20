@@ -4,6 +4,8 @@
         "iostream": "cpp",
         "ios": "cpp",
         "ostream": "cpp",
-        "cstring": "cpp"
-    }
+        "cstring": "cpp",
+        "xstring": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }
