@@ -5,7 +5,8 @@
         "ios": "cpp",
         "ostream": "cpp",
         "cstring": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "array": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
