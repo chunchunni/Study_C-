@@ -6,7 +6,8 @@
         "ostream": "cpp",
         "cstring": "cpp",
         "xstring": "cpp",
-        "array": "cpp"
+        "array": "cpp",
+        "string": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
