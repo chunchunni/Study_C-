@@ -51,8 +51,19 @@ void Time::Show() const
     std::cout << hours << " hours, " << minutes << " minutes";
 }
 
-Time & Time::set(Time t)
+
+//友元函数的定义处并不需要加上friend关键字，也不能使用类的::域操作符
+Time Time::operator*(double mult) const
 {
-    printf("%d\n", (*this).minutes);
-    printf("%d",t.minutes);
+    Time result;
+    long totalminutes = hours * mult * 60 + minutes * mult;
+    result.hours = totalminutes / 60;
+    result.minutes = totalminutes % 60;
+    return result;
+}
+
+std::ostream & operator<<(std::ostream & os, const Time & t)
+{
+    os << t.hours << " hours, " << t.minutes << " minutes";
+    return os; 
 }

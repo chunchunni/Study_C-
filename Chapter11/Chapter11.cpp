@@ -37,7 +37,6 @@ int main()
     total.Show();
     cout << endl;
 
-    morefixing.set(coding);
     /*
         this指针的使用条件是函数得声明为和对象一样的类型。
         可以使用：
@@ -47,6 +46,23 @@ int main()
 
         也可以直接在函数中使用成员变量，此时默认的成员变量是来自于调用函数的对象   
     */
+    
+    Time temp;
+    temp = morefixing * 4;
+    cout << temp;   //对<<进行重载
+
+    temp = 5 * morefixing;
+    cout << temp;
+    /*
+        一般情况下重载*运算符只能处理：
+            对象 * 数字
+        而不能处理
+            数字 * 对象
+        因为前者相当于 对象.operator*(数字)，这是一般的成员函数调用方法
+        而后者的数字是没有成员函数的，为了解决这一问题，就引入友元函数，将函数声明为类的友元，就可以访问对象的隐藏参数。
+    */
+    
+
 
     return 0;
 }
