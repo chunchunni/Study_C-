@@ -45,8 +45,8 @@ int main()
             for (pr = books.begin(); pr != books.end(); pr++)
                 ShowReview(*pr);
             // insert 1 item
-            books.insert(books.begin(), oldlist.begin() + 1,
-                        oldlist.begin() + 2);
+            books.insert(books.begin(), oldlist.begin() + 1, oldlist.begin() + 2);
+            // insert在指定区间插入元素。上述指把oldlist的第一个元素插入到books的最前面
             cout << "After insertion:\n";
             for (pr = books.begin(); pr != books.end(); pr++)
                 ShowReview(*pr);
