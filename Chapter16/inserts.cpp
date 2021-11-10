@@ -19,7 +19,7 @@ int main()
     cout << endl;
  
 // back_insert_iterator迭代器只允许在尾部快速插入的容器，此处是此处是直接构建一个匿名迭代器
-    copy(s2, s2 + 2, back_insert_iterator<vector<string> >(words));
+    copy(s2, s2 + 2, back_insert_iterator<vector<string>>(words));
     for_each(words.begin(), words.end(), output);
     cout << endl;
 
